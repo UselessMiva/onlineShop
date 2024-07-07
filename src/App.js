@@ -15,7 +15,6 @@ class App extends React.Component {
     isLoaded: false,
     items: [],
   };
-  this.currentItems = this.state.items
   this.addToOrder = this.addToOrder.bind(this)
   this.deleteOrder = this.deleteOrder.bind(this)
   this.chooseCategory = this.chooseCategory.bind(this)
@@ -41,7 +40,7 @@ class App extends React.Component {
     )
   }
   render(){
-    const {error, isLoaded } = this.state;
+    const {error, isLoaded} = this.state;
     return(
       <div className="wrapper">
         <Header orders={this.state.orders} onDelete={this.deleteOrder}/> 
